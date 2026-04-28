@@ -1,4 +1,6 @@
-# Cross-Domain-Transfer-of-Hyperspectral-Foundation-Models
+**Disclaimer: This repository is incomplete. Code and the rest of documentation will follow soon.**
+
+# Cross-Domain Transfer of Hyperspectral Foundation Models
 This repository is the official implementation of the paper:
 
 **Cross-Domain Transfer of Hyperspectral Foundation Models** <br/>
@@ -8,6 +10,34 @@ Nick Theisen, Peer Neubert </br>
 ## Abstract
 
 Hyperspectral imaging (HSI) semantic segmentation typically relies on in-domain training, but limited data availability often restricts model performance in real-world applications. Current approaches to leverage foundation models in proximal sensing use cross-modality techniques, bridging RGB and HSI to exploit vision foundation models. However, these methods either discard spectral information or introduce architectural complexity. We propose cross-domain transfer as an alternative, reusing HSI foundation models – originally trained in remote sensing – for proximal sensing applications. By eliminating the need to bridge modality gaps, our approach preserves spectral information while maintaining a simple architecture. Using the HS3-Bench benchmark, we systematically evaluate and compare conventional in-domain, in-modality training, cross-modality transfer and cross-domain transfer strategies. Our results demonstrate that cross-domain transfer achieves large performance improvements over in-domain, in-modality training,reduces the performance gap to cross-modality approaches and maintains strong performance in limited data settings. Thus, this work advances more effective HSI semantic segmentation in diverse applications.
+
+## Setup
+
+### Installation
+1. Setup cronda environment:
+```bash
+conda create -n cross-domain-hsi python=3.11 -y
+conda activate cross-domain-hsi
+pip install -e .
+```
+
+2. Verify installation. Open python console. The followin should not throw errors.
+```python
+import hyperseg
+import torch
+```
+
+### Dataset Preparation
+The raw datasets need to be converted to [HDF5](https://www.hdfgroup.org/solutions/hdf5/) file format to be compatible with our Base-Class HSDataModule.
+
+#### HyKo2
+1. Download HyKo2 [here](https://hyko-proxy.uni-koblenz.de/hyko-dataset/HyKo2/)
+
+#### Hyperspectral City V2 (HCV2)
+1. Download HCV2 [here](https://isis-data.science.uva.nl/cv/HyperspectralCityV2.0/)
+
+#### HSI-DriveV2
+1. Download HSI-Drive [here](https://ipaccess.ehu.eus/HSI-Drive/#download)
 
 ## Acknowledgement
 This repository reuses code from the HS3-Bench repository https://github.com/nickstheisen/hyperseg
