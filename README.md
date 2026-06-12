@@ -87,6 +87,6 @@ python run/test.py dataset=hyko2 model=unet model.ckpt=./modelweights/hyko2/hyko
 
 
 ## Acknowledgement
-This repository reuses code from the HS3-Bench repository https://github.com/nickstheisen/hyperseg
+This repository reuses code from the HS3-Bench repository https://github.com/nickstheisen/hyperseg and HyperSL repository https://github.com/kkweil/HyperSL. We would like to thank the authors.
 
 This work was partially funded by Wehrtechnische Dienststelle 41 (WTD), Koblenz, Germany.
