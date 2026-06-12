@@ -1,0 +1,19 @@
+name: 'hyko2'
+log_name: 'hyko2-spectra'
+basepath: '/mnt/data-ssd/datasets/hyko2'
+label_set: 'semantic'
+batch_size: 8
+manual_seed: 42
+label_def: 'hyko2-semantic_labeldef.txt'
+spectral_average: False
+pca: null
+pca_out_dir: '.'
+debug: null # if set to an integer only uses that number of samples
+num_workers: 8
+normalize: False
+drop_last: False
+prep_3dconv: False
+patch_size: 1
+stride: 1
+pad: null
+wavelengths_file: '/mnt/data-ssd/datasets/hyko2/wave.csv'

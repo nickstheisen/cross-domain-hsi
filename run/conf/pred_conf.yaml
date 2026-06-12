@@ -1,0 +1,42 @@
+defaults:
+    - _self_
+    - dataset: hyko2-spectra
+    - model: justoliunet
+
+model:
+    compile: False # not tested yet
+    da_hflip: 0.0
+    dropout: 0.0
+    log_grad_norm: False
+    rich_train_log: False
+    sub_batch_size: null
+    classification_task: 'multiclass'
+    export_metrics: False
+    ckpt_file: ???
+
+training:
+    resume_path: null
+    max_epochs: 500
+    mat_mul_precision: 'high' # can be set to 'medium'|'high'|'highest'
+    seed: 42
+    accelerator: 'gpu'
+    devices: [0]
+    early_stopping: False
+
+logging:
+    path: '/mnt/data/logs/'
+    tb_logger: False
+    wb_logger: False
+
+dataset: 
+    spectral_average: False
+    pca: null
+    pca_out_dir: '.'
+    debug: False # if true the dataset is reduced to 100 samples overall
+    num_workers: 4
+    normalize: False
+    half_precision: True
+    synth_rgb: False
+    rgb_out_dir: '.'
+    drop_last: False
+    train_x_percent: null

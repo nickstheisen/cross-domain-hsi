@@ -1,0 +1,9 @@
+name: 'hsidrive'
+log_name: 'hsidrivepca1'
+basepath: '/mnt/data/datasets/hsidrive'
+batch_size: 32
+label_def: "hsidrive_labeldef_noWater.txt"
+manual_seed: 42 
+ignore_water: True
+pca: 1
+pca_out_dir: '/mnt/data/datasets/hsidrive/pca1'

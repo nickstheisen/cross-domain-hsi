@@ -1,0 +1,23 @@
+name: 'hsidrive'
+log_name: 'hsidrive-hypersl-small5'
+basepath: '/mnt/data/datasets/hsidrive/hypersl-small-5'
+batch_size: 16
+train_prop: 0.6
+val_prop: 0.2
+label_def: "hsidrive_labeldef_noWater.txt"
+manual_seed: 42 
+precalc_histograms: False
+ignore_water: True
+spectral_average: False
+pca: null
+pca_out_dir: '.'
+debug: null # if set to an integer only uses that number of samples
+num_workers: 8
+normalize: False
+drop_last: False
+prep_3dconv: False
+patch_size: null
+stride: null
+pad: null
+wavelengths_file: '/mnt/data/datasets/hsidrive/wave.csv'
+train_x_percent: null

@@ -1,0 +1,20 @@
+name: 'hcv2'
+log_name: 'hcv2_hr'
+basepath: './data/datasets/hcv2/'
+batch_size: 4
+manual_seed: 42
+half_precision: True
+label_def: 'HCv2_labeldef.txt'
+num_workers: 4
+spectral_average: False
+pca: null
+pca_out_dir: '.'
+debug: null # if set to an integer only uses that number of samples
+normalize: False
+drop_last: False
+prep_3dconv: False
+patch_size: null
+stride: null
+pad: null
+wavelengths_file: './crossdomainhsi/datasets/spectralbands/wave_hcv2.csv'
+train_x_percent: null

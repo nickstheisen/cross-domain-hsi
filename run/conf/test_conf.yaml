@@ -1,0 +1,43 @@
+defaults:
+    - _self_
+    - dataset: hyko2
+    - model: unet
+
+model:
+    compile: False # not tested yet
+    da_hflip: 0.0
+    dropout: 0.0
+    log_grad_norm: False
+    rich_train_log: False
+    classification_task: 'multiclass'
+    plot_batch: False
+    export_metrics: True
+    sub_batch_size: null
+    ckpt: ???
+
+training:
+    resume_path: null
+    max_epochs: 500
+    mat_mul_precision: 'high' # can be set to 'medium'|'high'|'highest'
+    seed: 42
+    accelerator: 'gpu'
+    devices: [0]
+    early_stopping: False
+
+logging:
+    project_name: crossdomainhsi
+    path: '/mnt/data/logs/'
+    tb_logger: True
+    wb_logger: False
+
+dataset: 
+    spectral_average: False
+    pca: null
+    pca_out_dir: '.'
+    debug: False # if true the dataset is reduced to 100 samples overall
+    num_workers: 8
+    normalize: False
+    half_precision: True
+    synth_rgb: False
+    rgb_out_dir: '.'
+    drop_last: False

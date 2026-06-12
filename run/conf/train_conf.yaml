@@ -1,0 +1,42 @@
+defaults:
+    - _self_
+    - dataset: hyko2
+    - model: unet
+
+model:
+    compile: False # not tested yet
+    da_hflip: 0.0
+    dropout: 0.0    
+    log_grad_norm: False
+    rich_train_log: False
+    loss_name: 'cross_entropy'
+    classification_task: 'multiclass'
+    plot_batch: True
+    export_metrics: True
+    sub_batch_size: null
+
+training:
+    resume_path: null
+    max_epochs: 500
+    mat_mul_precision: 'high' # can be set to 'medium'|'high'|'highest'
+    seed: 42
+    accelerator: 'gpu'
+    devices: [0]
+    early_stopping: True
+
+logging:
+    project_name: cross_domain_hsi # required field, must be set by user
+    path: './logs/'
+    tb_logger: True
+    wb_logger: True
+
+dataset: 
+    spectral_average: False
+    pca: null
+    pca_out_dir: '.'
+    debug: null # if set to an integer only uses that number of samples
+    num_workers: 8
+    normalize: False
+    half_precision: True
+    drop_last: False
+    train_x_percent: null
