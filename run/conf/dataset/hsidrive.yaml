@@ -1,6 +1,6 @@
 name: 'hsidrive'
 log_name: 'hsidrive'
-basepath: '/mnt/data/datasets/hsidrive'
+basepath: './data/datasets/hsidrive'
 batch_size: 32
 train_prop: 0.6
 val_prop: 0.2
@@ -19,5 +19,5 @@ prep_3dconv: False
 patch_size: null
 stride: null
 pad: null
-wavelengths_file: '/mnt/data/datasets/hsidrive/wave.csv'
+wavelengths_file: './crossdomainhsi/datasets/spectralbands/wave_hisdrive.csv'
 train_x_percent: null

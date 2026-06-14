@@ -1,6 +1,6 @@
 name: 'hsidrive'
-log_name: 'hsidrive-hypersl-small5'
-basepath: '/mnt/data/datasets/hsidrive/hypersl-small-5'
+log_name: 'hsidrive-hypersl'
+basepath: './data/datasets/hsidrive/hypersl'
 batch_size: 16
 train_prop: 0.6
 val_prop: 0.2
@@ -19,5 +19,5 @@ prep_3dconv: False
 patch_size: null
 stride: null
 pad: null
-wavelengths_file: '/mnt/data/datasets/hsidrive/wave.csv'
+wavelengths_file: './crossdomainhsi/datasets/spectralbands/wave_hisdrive.csv'
 train_x_percent: null

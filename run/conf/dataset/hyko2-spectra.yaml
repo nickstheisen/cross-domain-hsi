@@ -1,6 +1,6 @@
 name: 'hyko2'
 log_name: 'hyko2-spectra'
-basepath: '/mnt/data-ssd/datasets/hyko2'
+basepath: './data/datasets/hyko2'
 label_set: 'semantic'
 batch_size: 8
 manual_seed: 42

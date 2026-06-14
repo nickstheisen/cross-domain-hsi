@@ -75,7 +75,10 @@ bash scripts/dataset_utils/prepare_hcv2.sh
 ## Reproduction
 The dataset splits, model weights and the HDF5-Converted HyKo2 dataset for reference can be downloaded [here](https://drive.google.com/drive/folders/16YTyiVuKEXhxgUFmwF9Uy-f86Oct1FyS?usp=sharing).
 
-- In some experiments we used features from a HyperSL-Backbone as input. We did not finetune the backbone. Hence the features can be calculated once for each dataset and then be processed with different models. TODO upload script ..
+In some experiments we used features from a HyperSL-Backbone as input. We did not finetune the backbone. Hence the features can be calculated once for each dataset and then be processed with different models. Calculate the features with
+```
+python scripts/dataset_utils/export_features.py --inputdir data/datasets/hyko2/ --backbone hypersl --dataset hyko2
+```
 
 We provide different scripts for training, testing and inference. The model and dataset configurations can be found in `run/conf/`. 
 

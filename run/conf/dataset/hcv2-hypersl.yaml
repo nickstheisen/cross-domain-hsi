@@ -1,6 +1,6 @@
 name: 'hcv2'
-log_name: 'hcv2_hr'
-basepath: '/mnt/data3/datasets/hcv2/downscaled/hypersl-small-5/'
+log_name: 'hcv2'
+basepath: './data/datasets/hcv2/hypersl'
 batch_size: 4
 manual_seed: 42
 half_precision: True
@@ -16,5 +16,5 @@ prep_3dconv: False
 patch_size: null
 stride: null
 pad: null
-wavelengths_file: '/mnt/data/datasets/hcv2/downscaled/wave.csv'
+wavelengths_file: './crossdomainhsi/datasets/spectralbands/wave_hcv2.csv'
 train_x_percent: null
